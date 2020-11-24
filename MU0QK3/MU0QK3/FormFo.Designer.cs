@@ -30,23 +30,35 @@ namespace MU0QK3
         private void InitializeComponent()
         {
             this.btnUjTanulo = new System.Windows.Forms.Button();
+            this.btnJegyek = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUjTanulo
             // 
-            this.btnUjTanulo.Location = new System.Drawing.Point(604, 136);
+            this.btnUjTanulo.Location = new System.Drawing.Point(323, 138);
             this.btnUjTanulo.Name = "btnUjTanulo";
-            this.btnUjTanulo.Size = new System.Drawing.Size(75, 23);
+            this.btnUjTanulo.Size = new System.Drawing.Size(147, 23);
             this.btnUjTanulo.TabIndex = 0;
-            this.btnUjTanulo.Text = "button1";
+            this.btnUjTanulo.Text = "Tanulók kezelése";
             this.btnUjTanulo.UseVisualStyleBackColor = true;
             this.btnUjTanulo.Click += new System.EventHandler(this.btnUjTanulo_Click);
+            // 
+            // btnJegyek
+            // 
+            this.btnJegyek.Location = new System.Drawing.Point(323, 197);
+            this.btnJegyek.Name = "btnJegyek";
+            this.btnJegyek.Size = new System.Drawing.Size(147, 23);
+            this.btnJegyek.TabIndex = 1;
+            this.btnJegyek.Text = "Jegyek";
+            this.btnJegyek.UseVisualStyleBackColor = true;
+            this.btnJegyek.Click += new System.EventHandler(this.btnJegyek_Click);
             // 
             // FormFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnJegyek);
             this.Controls.Add(this.btnUjTanulo);
             this.Name = "FormFo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -58,6 +70,7 @@ namespace MU0QK3
         #endregion
 
         private System.Windows.Forms.Button btnUjTanulo;
+        private System.Windows.Forms.Button btnJegyek;
     }
 }
 

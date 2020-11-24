@@ -23,5 +23,11 @@ namespace MU0QK3
             FUT.ShowDialog();
             //this.Visible = false;
         }
+
+        private void btnJegyek_Click(object sender, EventArgs e)
+        {
+            FormUjJegy FUJ = new FormUjJegy();
+            FUJ.ShowDialog();
+        }
     }
 }

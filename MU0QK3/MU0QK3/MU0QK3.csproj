@@ -78,6 +78,12 @@
     <Compile Include="FormFo.Designer.cs">
       <DependentUpon>FormFo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUjJegy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUjJegy.Designer.cs">
+      <DependentUpon>FormUjJegy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUjTanulo.cs">
       <SubType>Form</SubType>
     </Compile>
