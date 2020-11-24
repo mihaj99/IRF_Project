@@ -41,6 +41,15 @@ namespace MU0QK3
             uj.Születési_dátum = dateTimeSzuldat.Value;
             uj.SNI = chbSNI.Checked;
             context.Tanuloks.Add(uj);
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hiba a mentés során!");
+            }
             MessageBox.Show("Felvitel OK!");
         }
     }
