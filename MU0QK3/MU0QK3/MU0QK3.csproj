@@ -116,6 +116,9 @@
     <EmbeddedResource Include="FormFo.resx">
       <DependentUpon>FormFo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUjJegy.resx">
+      <DependentUpon>FormUjJegy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUjTanulo.resx">
       <DependentUpon>FormUjTanulo.cs</DependentUpon>
     </EmbeddedResource>

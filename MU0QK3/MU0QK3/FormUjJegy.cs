@@ -12,9 +12,14 @@ namespace MU0QK3
 {
     public partial class FormUjJegy : Form
     {
+        Database1Entities context = new Database1Entities();
         public FormUjJegy()
         {
             InitializeComponent();
+            listBoxNev.DataSource = context.Tanuloks.ToList();
+            listBoxNev.ValueMember = "ID";
+            listBoxNev.DisplayMember = "Név";
+            
         }
     }
 }
