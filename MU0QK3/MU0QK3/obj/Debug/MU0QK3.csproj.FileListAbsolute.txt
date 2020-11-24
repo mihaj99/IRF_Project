@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\Database1.mdf
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\Database1_log.ldf
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\MU0QK3.exe.config
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\MU0QK3.exe
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\MU0QK3.pdb
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csprojAssemblyReference.cache
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormFo.resources
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.Properties.Resources.resources
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csproj.GenerateResource.cache
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.exe
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.pdb
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormUjTanulo.resources
