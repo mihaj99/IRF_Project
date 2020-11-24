@@ -12,9 +12,11 @@ namespace MU0QK3
 {
     public partial class FormUjTanulo : Form
     {
+        Database1Entities context = new Database1Entities();
         public FormUjTanulo()
         {
             InitializeComponent(); 
+            
             
             
         }
@@ -27,7 +29,19 @@ namespace MU0QK3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            Tanulok uj = new Tanulok();
+            if (txtNev.Text=="")
+            {
+                MessageBox.Show("Név megadása kötelező!");
+                txtNev.Focus();
+                return;
+            }
+            
+            uj.Név = txtNev.Text;
+            uj.Születési_dátum = dateTimeSzuldat.Value;
+            uj.SNI = chbSNI.Checked;
+            context.Tanuloks.Add(uj);
+            MessageBox.Show("Felvitel OK!");
         }
     }
 }

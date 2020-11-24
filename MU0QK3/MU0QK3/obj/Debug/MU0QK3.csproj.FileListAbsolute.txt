@@ -11,3 +11,8 @@ C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csproj.Cor
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.exe
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.pdb
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormUjTanulo.resources
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csproj.CopyComplete

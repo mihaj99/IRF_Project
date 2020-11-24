@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Jegyek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TanuloFK" Type="int" />
+    <Property Name="Jegy" Type="int" />
+    <Property Name="Dátum" Type="date" />
+    <Property Name="Mire" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Tanulok">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Név" Type="nvarchar" MaxLength="25" />
+    <Property Name="Születési dátum" Type="date" />
+    <Property Name="SNI" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Jegyek_ToTable">
+    <End Role="Tanulok" Type="Self.Tanulok" Multiplicity="0..1" />
+    <End Role="Jegyek" Type="Self.Jegyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tanulok">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jegyek">
+        <PropertyRef Name="TanuloFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Jegyek" EntityType="Self.Jegyek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tanulok" EntityType="Self.Tanulok" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Jegyek_ToTable" Association="Self.FK_Jegyek_ToTable">
+      <End Role="Tanulok" EntitySet="Tanulok" />
+      <End Role="Jegyek" EntitySet="Jegyek" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

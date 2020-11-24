@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Jegyek">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="TanuloFK" Type="int" />
+          <Property Name="Jegy" Type="int" />
+          <Property Name="Dátum" Type="date" />
+          <Property Name="Mire" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Tanulok">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Név" Type="nvarchar" MaxLength="25" />
+          <Property Name="Születési dátum" Type="date" />
+          <Property Name="SNI" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Jegyek_ToTable">
+          <End Role="Tanulok" Type="Self.Tanulok" Multiplicity="0..1" />
+          <End Role="Jegyek" Type="Self.Jegyek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tanulok">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Jegyek">
+              <PropertyRef Name="TanuloFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Jegyek" EntityType="Self.Jegyek" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tanulok" EntityType="Self.Tanulok" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Jegyek_ToTable" Association="Self.FK_Jegyek_ToTable">
+            <End Role="Tanulok" EntitySet="Tanulok" />
+            <End Role="Jegyek" EntitySet="Jegyek" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Jegyek">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="TanuloFK" Type="Int32" />
+          <Property Name="Jegy" Type="Int32" />
+          <Property Name="Dátum" Type="DateTime" Precision="0" />
+          <Property Name="Mire" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tanulok" Relationship="Self.FK_Jegyek_ToTable" FromRole="Jegyek" ToRole="Tanulok" />
+        </EntityType>
+        <EntityType Name="Tanulok">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Név" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Születési_dátum" Type="DateTime" Precision="0" />
+          <Property Name="SNI" Type="Boolean" />
+          <NavigationProperty Name="Jegyeks" Relationship="Self.FK_Jegyek_ToTable" FromRole="Tanulok" ToRole="Jegyek" />
+        </EntityType>
+        <Association Name="FK_Jegyek_ToTable">
+          <End Role="Tanulok" Type="Self.Tanulok" Multiplicity="0..1" />
+          <End Role="Jegyek" Type="Self.Jegyek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tanulok">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Jegyek">
+              <PropertyRef Name="TanuloFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Jegyeks" EntityType="Self.Jegyek" />
+          <EntitySet Name="Tanuloks" EntityType="Self.Tanulok" />
+          <AssociationSet Name="FK_Jegyek_ToTable" Association="Self.FK_Jegyek_ToTable">
+            <End Role="Tanulok" EntitySet="Tanuloks" />
+            <End Role="Jegyek" EntitySet="Jegyeks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="Jegyeks">
+            <EntityTypeMapping TypeName="Database1Model.Jegyek">
+              <MappingFragment StoreEntitySet="Jegyek">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TanuloFK" ColumnName="TanuloFK" />
+                <ScalarProperty Name="Jegy" ColumnName="Jegy" />
+                <ScalarProperty Name="Dátum" ColumnName="Dátum" />
+                <ScalarProperty Name="Mire" ColumnName="Mire" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tanuloks">
+            <EntityTypeMapping TypeName="Database1Model.Tanulok">
+              <MappingFragment StoreEntitySet="Tanulok">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Név" ColumnName="Név" />
+                <ScalarProperty Name="Születési_dátum" ColumnName="Születési dátum" />
+                <ScalarProperty Name="SNI" ColumnName="SNI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

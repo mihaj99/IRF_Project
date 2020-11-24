@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Jegyek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TanuloFK" Type="Int32" />
+    <Property Name="Jegy" Type="Int32" />
+    <Property Name="Dátum" Type="DateTime" Precision="0" />
+    <Property Name="Mire" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tanulok" Relationship="Self.FK_Jegyek_ToTable" FromRole="Jegyek" ToRole="Tanulok" />
+  </EntityType>
+  <EntityType Name="Tanulok">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Név" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Születési_dátum" Type="DateTime" Precision="0" />
+    <Property Name="SNI" Type="Boolean" />
+    <NavigationProperty Name="Jegyeks" Relationship="Self.FK_Jegyek_ToTable" FromRole="Tanulok" ToRole="Jegyek" />
+  </EntityType>
+  <Association Name="FK_Jegyek_ToTable">
+    <End Role="Tanulok" Type="Self.Tanulok" Multiplicity="0..1" />
+    <End Role="Jegyek" Type="Self.Jegyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tanulok">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jegyek">
+        <PropertyRef Name="TanuloFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Jegyeks" EntityType="Self.Jegyek" />
+    <EntitySet Name="Tanuloks" EntityType="Self.Tanulok" />
+    <AssociationSet Name="FK_Jegyek_ToTable" Association="Self.FK_Jegyek_ToTable">
+      <End Role="Tanulok" EntitySet="Tanuloks" />
+      <End Role="Jegyek" EntitySet="Jegyeks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
