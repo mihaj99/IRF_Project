@@ -13,6 +13,7 @@ namespace MU0QK3
     public partial class FormUjJegy : Form
     {
         Database1Entities context = new Database1Entities();
+        public static Tanulok akttan = new Tanulok();
         public FormUjJegy()
         {
             InitializeComponent();
@@ -55,6 +56,15 @@ namespace MU0QK3
             context.SaveChanges();
 
 
+        }
+
+        private void buttonOsztalyzatok_Click(object sender, EventArgs e)
+        {
+            akttan = (Tanulok)listBoxTanulok.SelectedItem;
+            FormOsztalyzatok fo = new FormOsztalyzatok();
+            fo.ShowDialog();
+            
+            
         }
     }
 }

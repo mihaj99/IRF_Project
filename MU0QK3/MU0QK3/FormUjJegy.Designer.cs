@@ -135,6 +135,7 @@ namespace MU0QK3
             this.buttonOsztalyzatok.TabIndex = 13;
             this.buttonOsztalyzatok.Text = "Osztályzatok kezelése";
             this.buttonOsztalyzatok.UseVisualStyleBackColor = true;
+            this.buttonOsztalyzatok.Click += new System.EventHandler(this.buttonOsztalyzatok_Click);
             // 
             // FormUjJegy
             // 
