@@ -61,7 +61,8 @@ namespace MU0QK3
         private void buttonOsztalyzatok_Click(object sender, EventArgs e)
         {
             akttan = (Tanulok)listBoxTanulok.SelectedItem;
-            
+            FormOsztalyzatok fo = new FormOsztalyzatok();
+            fo.ShowDialog();
             
             
             
