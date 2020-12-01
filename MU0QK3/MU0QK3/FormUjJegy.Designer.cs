@@ -35,6 +35,10 @@ namespace MU0QK3
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.listBoxTanulok = new System.Windows.Forms.ListBox();
+            this.textBoxKereses = new System.Windows.Forms.TextBox();
+            this.labelKereses = new System.Windows.Forms.Label();
+            this.btnFelvitel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelJegy
@@ -88,11 +92,48 @@ namespace MU0QK3
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 8;
             // 
+            // listBoxTanulok
+            // 
+            this.listBoxTanulok.FormattingEnabled = true;
+            this.listBoxTanulok.Location = new System.Drawing.Point(12, 63);
+            this.listBoxTanulok.Name = "listBoxTanulok";
+            this.listBoxTanulok.Size = new System.Drawing.Size(223, 355);
+            this.listBoxTanulok.TabIndex = 9;
+            // 
+            // textBoxKereses
+            // 
+            this.textBoxKereses.Location = new System.Drawing.Point(63, 34);
+            this.textBoxKereses.Name = "textBoxKereses";
+            this.textBoxKereses.Size = new System.Drawing.Size(172, 20);
+            this.textBoxKereses.TabIndex = 10;
+            // 
+            // labelKereses
+            // 
+            this.labelKereses.AutoSize = true;
+            this.labelKereses.Location = new System.Drawing.Point(12, 37);
+            this.labelKereses.Name = "labelKereses";
+            this.labelKereses.Size = new System.Drawing.Size(45, 13);
+            this.labelKereses.TabIndex = 11;
+            this.labelKereses.Text = "Keresés";
+            // 
+            // btnFelvitel
+            // 
+            this.btnFelvitel.Location = new System.Drawing.Point(634, 227);
+            this.btnFelvitel.Name = "btnFelvitel";
+            this.btnFelvitel.Size = new System.Drawing.Size(75, 23);
+            this.btnFelvitel.TabIndex = 12;
+            this.btnFelvitel.Text = "Felvitel";
+            this.btnFelvitel.UseVisualStyleBackColor = true;
+            // 
             // FormUjJegy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFelvitel);
+            this.Controls.Add(this.labelKereses);
+            this.Controls.Add(this.textBoxKereses);
+            this.Controls.Add(this.listBoxTanulok);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -113,5 +154,9 @@ namespace MU0QK3
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ListBox listBoxTanulok;
+        private System.Windows.Forms.TextBox textBoxKereses;
+        private System.Windows.Forms.Label labelKereses;
+        private System.Windows.Forms.Button btnFelvitel;
     }
 }
