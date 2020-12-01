@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="TanuloFK" Type="int" />
           <Property Name="Jegy" Type="int" />
           <Property Name="Dátum" Type="date" />
@@ -53,7 +53,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TanuloFK" Type="Int32" />
           <Property Name="Jegy" Type="Int32" />
           <Property Name="Dátum" Type="DateTime" Precision="0" />

@@ -39,6 +39,7 @@ namespace MU0QK3
             this.textBoxKereses = new System.Windows.Forms.TextBox();
             this.labelKereses = new System.Windows.Forms.Label();
             this.btnFelvitel = new System.Windows.Forms.Button();
+            this.buttonOsztalyzatok = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelJegy
@@ -124,12 +125,23 @@ namespace MU0QK3
             this.btnFelvitel.TabIndex = 12;
             this.btnFelvitel.Text = "Felvitel";
             this.btnFelvitel.UseVisualStyleBackColor = true;
+            this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
+            // 
+            // buttonOsztalyzatok
+            // 
+            this.buttonOsztalyzatok.Location = new System.Drawing.Point(255, 375);
+            this.buttonOsztalyzatok.Name = "buttonOsztalyzatok";
+            this.buttonOsztalyzatok.Size = new System.Drawing.Size(75, 43);
+            this.buttonOsztalyzatok.TabIndex = 13;
+            this.buttonOsztalyzatok.Text = "Osztályzatok kezelése";
+            this.buttonOsztalyzatok.UseVisualStyleBackColor = true;
             // 
             // FormUjJegy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonOsztalyzatok);
             this.Controls.Add(this.btnFelvitel);
             this.Controls.Add(this.labelKereses);
             this.Controls.Add(this.textBoxKereses);
@@ -158,5 +170,6 @@ namespace MU0QK3
         private System.Windows.Forms.TextBox textBoxKereses;
         private System.Windows.Forms.Label labelKereses;
         private System.Windows.Forms.Button btnFelvitel;
+        private System.Windows.Forms.Button buttonOsztalyzatok;
     }
 }

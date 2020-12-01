@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TanuloFK" Type="Int32" />
     <Property Name="Jegy" Type="Int32" />
     <Property Name="Dátum" Type="DateTime" Precision="0" />

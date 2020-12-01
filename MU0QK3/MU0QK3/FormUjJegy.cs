@@ -18,6 +18,7 @@ namespace MU0QK3
             InitializeComponent();
             feltolt();
             osztalyzatok();
+            temak();
             
             
             
@@ -40,7 +41,20 @@ namespace MU0QK3
         {
             comboBoxTema.Items.Add("Teszt");
         }
-        
 
+        private void btnFelvitel_Click(object sender, EventArgs e)
+        {
+            Tanulok akttanulo = new Tanulok();
+            akttanulo =(Tanulok) listBoxTanulok.SelectedItem;
+            Jegyek ujjegy = new Jegyek();
+            ujjegy.Dátum = dateTimePicker1.Value;
+            ujjegy.Jegy = (int)comboBoxOsztalyzat.SelectedItem;
+            ujjegy.Mire =(string) comboBoxTema.SelectedItem;
+            ujjegy.TanuloFK = akttanulo.Id;
+            context.Jegyeks.Add(ujjegy);
+            context.SaveChanges();
+
+
+        }
     }
 }
