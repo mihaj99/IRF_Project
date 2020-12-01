@@ -29,9 +29,6 @@ namespace MU0QK3
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxNev = new System.Windows.Forms.ListBox();
-            this.textBoxKereses = new System.Windows.Forms.TextBox();
-            this.lblNev = new System.Windows.Forms.Label();
             this.labelJegy = new System.Windows.Forms.Label();
             this.labelDatum = new System.Windows.Forms.Label();
             this.labelTema = new System.Windows.Forms.Label();
@@ -39,30 +36,6 @@ namespace MU0QK3
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // listBoxNev
-            // 
-            this.listBoxNev.FormattingEnabled = true;
-            this.listBoxNev.Location = new System.Drawing.Point(12, 35);
-            this.listBoxNev.Name = "listBoxNev";
-            this.listBoxNev.Size = new System.Drawing.Size(182, 368);
-            this.listBoxNev.TabIndex = 0;
-            // 
-            // textBoxKereses
-            // 
-            this.textBoxKereses.Location = new System.Drawing.Point(54, 9);
-            this.textBoxKereses.Name = "textBoxKereses";
-            this.textBoxKereses.Size = new System.Drawing.Size(140, 20);
-            this.textBoxKereses.TabIndex = 1;
-            // 
-            // lblNev
-            // 
-            this.lblNev.AutoSize = true;
-            this.lblNev.Location = new System.Drawing.Point(9, 12);
-            this.lblNev.Name = "lblNev";
-            this.lblNev.Size = new System.Drawing.Size(45, 13);
-            this.lblNev.TabIndex = 2;
-            this.lblNev.Text = "Keresés";
             // 
             // labelJegy
             // 
@@ -126,9 +99,6 @@ namespace MU0QK3
             this.Controls.Add(this.labelTema);
             this.Controls.Add(this.labelDatum);
             this.Controls.Add(this.labelJegy);
-            this.Controls.Add(this.lblNev);
-            this.Controls.Add(this.textBoxKereses);
-            this.Controls.Add(this.listBoxNev);
             this.Name = "FormUjJegy";
             this.Text = "FormUjJegy";
             this.ResumeLayout(false);
@@ -137,10 +107,6 @@ namespace MU0QK3
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBoxNev;
-        private System.Windows.Forms.TextBox textBoxKereses;
-        private System.Windows.Forms.Label lblNev;
         private System.Windows.Forms.Label labelJegy;
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Label labelTema;
