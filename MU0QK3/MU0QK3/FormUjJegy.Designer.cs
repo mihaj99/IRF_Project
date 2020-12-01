@@ -33,8 +33,8 @@ namespace MU0QK3
             this.labelDatum = new System.Windows.Forms.Label();
             this.labelTema = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxOsztalyzat = new System.Windows.Forms.ComboBox();
+            this.comboBoxTema = new System.Windows.Forms.ComboBox();
             this.listBoxTanulok = new System.Windows.Forms.ListBox();
             this.textBoxKereses = new System.Windows.Forms.TextBox();
             this.labelKereses = new System.Windows.Forms.Label();
@@ -76,21 +76,21 @@ namespace MU0QK3
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
-            // comboBox1
+            // comboBoxOsztalyzat
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(588, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboBoxOsztalyzat.FormattingEnabled = true;
+            this.comboBoxOsztalyzat.Location = new System.Drawing.Point(588, 111);
+            this.comboBoxOsztalyzat.Name = "comboBoxOsztalyzat";
+            this.comboBoxOsztalyzat.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxOsztalyzat.TabIndex = 7;
             // 
-            // comboBox2
+            // comboBoxTema
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(588, 179);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 8;
+            this.comboBoxTema.FormattingEnabled = true;
+            this.comboBoxTema.Location = new System.Drawing.Point(588, 179);
+            this.comboBoxTema.Name = "comboBoxTema";
+            this.comboBoxTema.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTema.TabIndex = 8;
             // 
             // listBoxTanulok
             // 
@@ -134,8 +134,8 @@ namespace MU0QK3
             this.Controls.Add(this.labelKereses);
             this.Controls.Add(this.textBoxKereses);
             this.Controls.Add(this.listBoxTanulok);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTema);
+            this.Controls.Add(this.comboBoxOsztalyzat);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelTema);
             this.Controls.Add(this.labelDatum);
@@ -152,8 +152,8 @@ namespace MU0QK3
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Label labelTema;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxOsztalyzat;
+        private System.Windows.Forms.ComboBox comboBoxTema;
         private System.Windows.Forms.ListBox listBoxTanulok;
         private System.Windows.Forms.TextBox textBoxKereses;
         private System.Windows.Forms.Label labelKereses;
