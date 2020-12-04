@@ -27,9 +27,14 @@ namespace MU0QK3
             
             listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
             listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
+            textBoxKereses.TextChanged += TextBoxKereses_TextChanged;
             
             
-            
+        }
+
+        private void TextBoxKereses_TextChanged(object sender, EventArgs e)
+        {
+            feltolt();
         }
 
         private void ListBoxJegyek_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,11 +56,15 @@ namespace MU0QK3
             akttan = (Tanulok)listBoxTanulok.SelectedItem;
             
             jegyfeltolt();
+            labelCim.Text = String.Format("{0} osztályzatai", akttan.Név);
         }
 
         private void feltolt()
         {
-            listBoxTanulok.DataSource = context.Tanuloks.ToList();
+            var ker_eredmeny = (from x in context.Tanuloks
+                                where x.Név.Contains(textBoxKereses.Text)
+                                select x);
+            listBoxTanulok.DataSource = ker_eredmeny.ToList();
             listBoxTanulok.DisplayMember = "Név";
             listBoxTanulok.ValueMember = "Id";
         }

@@ -46,6 +46,7 @@ namespace MU0QK3
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTorles = new System.Windows.Forms.Button();
+            this.labelCim = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelJegy
@@ -195,11 +196,20 @@ namespace MU0QK3
             this.buttonTorles.UseVisualStyleBackColor = true;
             this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
+            // labelCim
+            // 
+            this.labelCim.AutoSize = true;
+            this.labelCim.Location = new System.Drawing.Point(483, 37);
+            this.labelCim.Name = "labelCim";
+            this.labelCim.Size = new System.Drawing.Size(0, 13);
+            this.labelCim.TabIndex = 21;
+            // 
             // FormUjJegy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelCim);
             this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -242,5 +252,6 @@ namespace MU0QK3
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTorles;
+        private System.Windows.Forms.Label labelCim;
     }
 }
