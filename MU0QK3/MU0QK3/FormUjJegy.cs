@@ -14,6 +14,10 @@ namespace MU0QK3
     {
         Database1Entities context = new Database1Entities();
         public static Tanulok akttan = new Tanulok();
+        public Jegyek aktjegy = new Jegyek();
+        List<Jegyek> jegyek2 = new List<Jegyek>();
+        
+
         public FormUjJegy()
         {
             InitializeComponent();
@@ -21,9 +25,34 @@ namespace MU0QK3
             osztalyzatok();
             temak();
             
+            listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
+            listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
+            
             
             
         }
+
+        private void ListBoxJegyek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            aktjegy=(Jegyek)listBoxJegyek.SelectedItem;
+            foreach (var item in jegyek2)
+            {
+                if (item.Id==aktjegy.Id)
+                {
+                    labelDat.Text = item.Dátum.ToString();
+                    labelTem.Text = item.Mire;
+                }
+            }
+        }
+
+        private void ListBoxTanulok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            akttan = (Tanulok)listBoxTanulok.SelectedItem;
+            
+            jegyfeltolt();
+        }
+
         private void feltolt()
         {
             listBoxTanulok.DataSource = context.Tanuloks.ToList();
@@ -43,6 +72,25 @@ namespace MU0QK3
             comboBoxTema.Items.Add("Teszt");
         }
 
+        public void jegyfeltolt()
+        {
+
+            List<Jegyek> jegyek = new List<Jegyek>();
+
+            foreach (var item in context.Jegyeks)
+            {
+                if (item.TanuloFK == akttan.Id)
+                {
+                    jegyek.Add(item);
+                }
+            }
+            listBoxJegyek.DataSource = jegyek;
+            listBoxJegyek.DisplayMember = "Jegy";
+            listBoxJegyek.ValueMember = "Id";
+            jegyek2 = jegyek;
+            
+        }
+
         private void btnFelvitel_Click(object sender, EventArgs e)
         {
             Tanulok akttanulo = new Tanulok();
@@ -60,12 +108,11 @@ namespace MU0QK3
 
         private void buttonOsztalyzatok_Click(object sender, EventArgs e)
         {
-            akttan = (Tanulok)listBoxTanulok.SelectedItem;
-            FormOsztalyzatok fo = new FormOsztalyzatok();
-            fo.ShowDialog();
+
             
-            
-            
+
+
+
         }
     }
 }
