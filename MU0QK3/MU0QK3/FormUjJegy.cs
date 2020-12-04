@@ -102,6 +102,7 @@ namespace MU0QK3
             ujjegy.TanuloFK = akttanulo.Id;
             context.Jegyeks.Add(ujjegy);
             context.SaveChanges();
+            jegyfeltolt();
 
 
         }
@@ -113,6 +114,13 @@ namespace MU0QK3
 
 
 
+        }
+
+        private void buttonTorles_Click(object sender, EventArgs e)
+        {
+            context.Jegyeks.Remove(aktjegy);
+            context.SaveChanges();
+            jegyfeltolt();
         }
     }
 }

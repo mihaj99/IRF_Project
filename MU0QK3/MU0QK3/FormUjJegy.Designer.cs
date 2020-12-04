@@ -45,6 +45,7 @@ namespace MU0QK3
             this.labelDat = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonTorles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelJegy
@@ -184,11 +185,22 @@ namespace MU0QK3
             this.label2.TabIndex = 19;
             this.label2.Text = "Téma";
             // 
+            // buttonTorles
+            // 
+            this.buttonTorles.Location = new System.Drawing.Point(605, 144);
+            this.buttonTorles.Name = "buttonTorles";
+            this.buttonTorles.Size = new System.Drawing.Size(75, 23);
+            this.buttonTorles.TabIndex = 20;
+            this.buttonTorles.Text = "Törlés";
+            this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
+            // 
             // FormUjJegy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelDat);
@@ -229,5 +241,6 @@ namespace MU0QK3
         private System.Windows.Forms.Label labelDat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonTorles;
     }
 }
