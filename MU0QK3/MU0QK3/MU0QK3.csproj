@@ -107,6 +107,15 @@
     <Compile Include="Jegyek.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="LabelAtlag.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelID.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelNev.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

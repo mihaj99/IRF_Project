@@ -34,6 +34,7 @@ namespace MU0QK3
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartAtlagok = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartAtlagok)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,16 +56,24 @@ namespace MU0QK3
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(385, 12);
+            this.panel1.Location = new System.Drawing.Point(447, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(349, 391);
+            this.panel1.Size = new System.Drawing.Size(311, 333);
             this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(318, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(125, 333);
+            this.panel2.TabIndex = 2;
             // 
             // FormAtlagok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartAtlagok);
             this.Name = "FormAtlagok";
@@ -78,5 +87,6 @@ namespace MU0QK3
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAtlagok;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

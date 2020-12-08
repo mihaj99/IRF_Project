@@ -13,10 +13,12 @@ namespace MU0QK3
     public partial class FormAtlagok : Form
     {
         List<atlagok> _atlagok = new List<atlagok>();
-        List<Tanulok> _tanulok = new List<Tanulok>();
-        List<Jegyek> _jegyek = new List<Jegyek>();
+        
         int szamlalo;
         int maxhossz = 0;
+        
+        int leghosszabbnev;
+        int leghosszabbId;
 
         Database1Entities context = new Database1Entities();
         double osszeg = 0;
@@ -30,19 +32,24 @@ namespace MU0QK3
             InitializeComponent();
             Atlagszamitas();
             Diagram();
-            Nevek();
+            
+            IdKiir();
+            
+            NevekKiir();
             MaximumHossz();
             AtlagKiir();
         }
 
         private void AtlagKiir()
         {
+            
+            
             szamlalo = 0;
             foreach (var item in _atlagok)
             {
                 Label lbl = new Label();
                 lbl.Text = item.atlag.ToString();
-                lbl.Left = 1 + maxhossz;
+                lbl.Left = 1+leghosszabbnev;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
                 szamlalo++;
@@ -52,17 +59,33 @@ namespace MU0QK3
 
         private void MaximumHossz()
         {
+            leghosszabbnev = 0;
+            
             foreach (Label item in panel1.Controls)
             {
-                if (item.Width > maxhossz)
+                
+                
+                if (item.Width>leghosszabbnev)
                 {
-                    maxhossz = item.Width;
+                    leghosszabbnev = item.Width;
                 }
             }
+            foreach (Label item in panel2.Controls)
+            {
+
+
+                if (item.Width > leghosszabbId)
+                {
+                    leghosszabbId = item.Width;
+                }
+            }
+            
         }
 
-        private void Nevek()
+        private void NevekKiir()
         {
+            
+
             szamlalo = 0;
             foreach (var item in _atlagok)
             {
@@ -71,6 +94,19 @@ namespace MU0QK3
                 lbl.Left = 1;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
+                szamlalo++;
+
+            }
+        }
+        private void IdKiir()
+        {
+            foreach (var item in _atlagok)
+            {
+                Label lbl = new Label();
+                lbl.Text = item.ID.ToString();
+                lbl.Left = 1;
+                lbl.Top = 1 + szamlalo * lbl.Height;
+                panel2.Controls.Add(lbl);
                 szamlalo++;
 
             }
