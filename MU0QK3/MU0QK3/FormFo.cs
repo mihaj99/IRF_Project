@@ -29,5 +29,11 @@ namespace MU0QK3
             FormUjJegy FUJ = new FormUjJegy();
             FUJ.ShowDialog();
         }
+
+        private void buttonAtlagok_Click(object sender, EventArgs e)
+        {
+            FormAtlagok fa = new FormAtlagok();
+            fa.ShowDialog();
+        }
     }
 }

@@ -18,3 +18,4 @@ C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\bin\Debug\EntityFramework.S
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.csproj.CopyComplete
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormUjJegy.resources
 C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormOsztalyzatok.resources
+C:\Users\User\source\repos\IRF_Project\MU0QK3\MU0QK3\obj\Debug\MU0QK3.FormAtlagok.resources

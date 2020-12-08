@@ -31,6 +31,7 @@ namespace MU0QK3
         {
             this.btnUjTanulo = new System.Windows.Forms.Button();
             this.btnJegyek = new System.Windows.Forms.Button();
+            this.buttonAtlagok = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUjTanulo
@@ -53,11 +54,22 @@ namespace MU0QK3
             this.btnJegyek.UseVisualStyleBackColor = true;
             this.btnJegyek.Click += new System.EventHandler(this.btnJegyek_Click);
             // 
+            // buttonAtlagok
+            // 
+            this.buttonAtlagok.Location = new System.Drawing.Point(323, 260);
+            this.buttonAtlagok.Name = "buttonAtlagok";
+            this.buttonAtlagok.Size = new System.Drawing.Size(147, 23);
+            this.buttonAtlagok.TabIndex = 2;
+            this.buttonAtlagok.Text = "Átlagok";
+            this.buttonAtlagok.UseVisualStyleBackColor = true;
+            this.buttonAtlagok.Click += new System.EventHandler(this.buttonAtlagok_Click);
+            // 
             // FormFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAtlagok);
             this.Controls.Add(this.btnJegyek);
             this.Controls.Add(this.btnUjTanulo);
             this.Name = "FormFo";
@@ -71,6 +83,7 @@ namespace MU0QK3
 
         private System.Windows.Forms.Button btnUjTanulo;
         private System.Windows.Forms.Button btnJegyek;
+        private System.Windows.Forms.Button buttonAtlagok;
     }
 }
 
