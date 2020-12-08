@@ -43,28 +43,29 @@ namespace MU0QK3
             this.chartAtlagok.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartAtlagok.Legends.Add(legend1);
-            this.chartAtlagok.Location = new System.Drawing.Point(12, 70);
+            this.chartAtlagok.Location = new System.Drawing.Point(12, 365);
             this.chartAtlagok.Name = "chartAtlagok";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartAtlagok.Series.Add(series1);
-            this.chartAtlagok.Size = new System.Drawing.Size(300, 300);
+            this.chartAtlagok.Size = new System.Drawing.Size(845, 300);
             this.chartAtlagok.TabIndex = 0;
             this.chartAtlagok.Text = "chart1";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(318, 70);
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Location = new System.Drawing.Point(22, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 333);
+            this.panel1.Size = new System.Drawing.Size(592, 286);
             this.panel1.TabIndex = 1;
             // 
             // FormAtlagok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(922, 692);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartAtlagok);
             this.Name = "FormAtlagok";

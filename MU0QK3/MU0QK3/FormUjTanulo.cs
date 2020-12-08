@@ -15,12 +15,17 @@ namespace MU0QK3
         Database1Entities context = new Database1Entities();
         public FormUjTanulo()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            
             
             
             
         }
+
         
+
+        
+
 
         private void FormUjTanulo_FormClosed(object sender, FormClosedEventArgs e)
         {

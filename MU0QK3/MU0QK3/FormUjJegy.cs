@@ -78,6 +78,7 @@ namespace MU0QK3
         }
         private void temak()
         {
+            
             comboBoxTema.Items.Add("Teszt");
         }
 

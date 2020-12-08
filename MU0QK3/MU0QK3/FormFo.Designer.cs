@@ -46,21 +46,21 @@ namespace MU0QK3
             // 
             // btnJegyek
             // 
-            this.btnJegyek.Location = new System.Drawing.Point(323, 197);
+            this.btnJegyek.Location = new System.Drawing.Point(323, 167);
             this.btnJegyek.Name = "btnJegyek";
             this.btnJegyek.Size = new System.Drawing.Size(147, 23);
             this.btnJegyek.TabIndex = 1;
-            this.btnJegyek.Text = "Jegyek";
+            this.btnJegyek.Text = "Jegyek kezelése";
             this.btnJegyek.UseVisualStyleBackColor = true;
             this.btnJegyek.Click += new System.EventHandler(this.btnJegyek_Click);
             // 
             // buttonAtlagok
             // 
-            this.buttonAtlagok.Location = new System.Drawing.Point(323, 260);
+            this.buttonAtlagok.Location = new System.Drawing.Point(323, 196);
             this.buttonAtlagok.Name = "buttonAtlagok";
             this.buttonAtlagok.Size = new System.Drawing.Size(147, 23);
             this.buttonAtlagok.TabIndex = 2;
-            this.buttonAtlagok.Text = "Átlagok";
+            this.buttonAtlagok.Text = "Átlagok megtekintése";
             this.buttonAtlagok.UseVisualStyleBackColor = true;
             this.buttonAtlagok.Click += new System.EventHandler(this.buttonAtlagok_Click);
             // 

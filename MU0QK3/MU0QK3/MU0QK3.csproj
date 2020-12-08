@@ -73,6 +73,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtlagCimke.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="atlagok.cs" />
     <Compile Include="FormAtlagok.cs">
       <SubType>Form</SubType>
@@ -107,15 +110,6 @@
     <Compile Include="Jegyek.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="LabelAtlag.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="LabelID.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="LabelNev.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +130,7 @@
     <Compile Include="Tanulok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="VegsoJegy.cs" />
     <EmbeddedResource Include="FormAtlagok.resx">
       <DependentUpon>FormAtlagok.cs</DependentUpon>
     </EmbeddedResource>

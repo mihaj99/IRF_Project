@@ -37,6 +37,7 @@ namespace MU0QK3
             NevekKiir();
             MaximumHossz();
             AtlagKiir();
+            panel1.AutoScroll = true;
         }
 
         private void AtlagKiir()
@@ -46,9 +47,9 @@ namespace MU0QK3
             szamlalo = 0;
             foreach (var item in _atlagok)
             {
-                Label lbl = new Label();
+                AtlagCimke lbl = new AtlagCimke();
                 lbl.Text = item.atlag.ToString();
-                lbl.Left = 1+maxhossz*2;
+                lbl.Left = 1+maxhossz+30;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
                 szamlalo++;
@@ -60,7 +61,7 @@ namespace MU0QK3
         {
             maxhossz = 0;
             
-            foreach (Label item in panel1.Controls)
+            foreach (AtlagCimke item in panel1.Controls)
             {
                 
                 
@@ -80,7 +81,7 @@ namespace MU0QK3
             szamlalo = 0;
             foreach (var item in _atlagok)
             {
-                Label lbl = new Label();
+                AtlagCimke lbl = new AtlagCimke();
                 lbl.Text = item.nev;
                 lbl.Left = 1+maxhossz;
                 lbl.Top = 1 + szamlalo * lbl.Height;
@@ -93,7 +94,7 @@ namespace MU0QK3
         {
             foreach (var item in _atlagok)
             {
-                Label lbl = new Label();
+                AtlagCimke lbl = new AtlagCimke();
                 lbl.Text = item.ID.ToString();
                 lbl.Left = 1;
                 lbl.Top = 1 + szamlalo * lbl.Height;

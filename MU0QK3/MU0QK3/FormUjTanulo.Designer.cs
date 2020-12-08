@@ -37,6 +37,7 @@ namespace MU0QK3
             this.chbSNI = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.labelKereses = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNev
@@ -110,11 +111,20 @@ namespace MU0QK3
             this.btnCancel.Text = "Mégse";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // labelKereses
+            // 
+            this.labelKereses.AutoSize = true;
+            this.labelKereses.Location = new System.Drawing.Point(412, 61);
+            this.labelKereses.Name = "labelKereses";
+            this.labelKereses.Size = new System.Drawing.Size(0, 13);
+            this.labelKereses.TabIndex = 10;
+            // 
             // FormUjTanulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelKereses);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chbSNI);
@@ -142,5 +152,6 @@ namespace MU0QK3
         private System.Windows.Forms.CheckBox chbSNI;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label labelKereses;
     }
 }
