@@ -17,8 +17,7 @@ namespace MU0QK3
         int szamlalo;
         int maxhossz = 0;
         
-        int leghosszabbnev;
-        int leghosszabbId;
+        
 
         Database1Entities context = new Database1Entities();
         double osszeg = 0;
@@ -34,7 +33,7 @@ namespace MU0QK3
             Diagram();
             
             IdKiir();
-            
+            MaximumHossz();
             NevekKiir();
             MaximumHossz();
             AtlagKiir();
@@ -49,7 +48,7 @@ namespace MU0QK3
             {
                 Label lbl = new Label();
                 lbl.Text = item.atlag.ToString();
-                lbl.Left = 1+leghosszabbnev;
+                lbl.Left = 1+maxhossz*2;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
                 szamlalo++;
@@ -59,26 +58,18 @@ namespace MU0QK3
 
         private void MaximumHossz()
         {
-            leghosszabbnev = 0;
+            maxhossz = 0;
             
             foreach (Label item in panel1.Controls)
             {
                 
                 
-                if (item.Width>leghosszabbnev)
+                if (item.Width>maxhossz)
                 {
-                    leghosszabbnev = item.Width;
+                    maxhossz = item.Width;
                 }
             }
-            foreach (Label item in panel2.Controls)
-            {
-
-
-                if (item.Width > leghosszabbId)
-                {
-                    leghosszabbId = item.Width;
-                }
-            }
+            
             
         }
 
@@ -91,7 +82,7 @@ namespace MU0QK3
             {
                 Label lbl = new Label();
                 lbl.Text = item.nev;
-                lbl.Left = 1;
+                lbl.Left = 1+maxhossz;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
                 szamlalo++;
@@ -106,7 +97,7 @@ namespace MU0QK3
                 lbl.Text = item.ID.ToString();
                 lbl.Left = 1;
                 lbl.Top = 1 + szamlalo * lbl.Height;
-                panel2.Controls.Add(lbl);
+                panel1.Controls.Add(lbl);
                 szamlalo++;
 
             }
