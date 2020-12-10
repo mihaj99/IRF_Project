@@ -25,7 +25,7 @@ namespace MU0QK3
             feltolt();
             osztalyzatok();
             temak();
-            listBoxTanulok.ClearSelected();
+            
             
             listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
             listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
@@ -163,15 +163,24 @@ namespace MU0QK3
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.ShowDialog();
-            StreamReader sr = new StreamReader(ofd.FileName,Encoding.UTF8);
             
-            string[] sor=sr.ReadLine().Split(',');
-
-            foreach (var item in sor)
+            if (ofd.ShowDialog()==DialogResult.OK)
             {
-                comboBoxTema.Items.Add(item);
+                StreamReader sr = new StreamReader(ofd.FileName, Encoding.UTF8);
+
+                string[] sor = sr.ReadLine().Split(',');
+
+                foreach (var item in sor)
+                {
+                    comboBoxTema.Items.Add(item);
+                }
             }
+            
+            
+
+                
+            
+            
 
 
             
