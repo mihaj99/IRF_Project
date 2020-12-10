@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace MU0QK3
             feltolt();
             osztalyzatok();
             temak();
+            listBoxTanulok.ClearSelected();
             
             listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
             listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
@@ -57,6 +59,7 @@ namespace MU0QK3
             
             jegyfeltolt();
             labelCim.Text = String.Format("{0} osztályzatai", akttan.Név);
+            
         }
 
         private void feltolt()
@@ -99,20 +102,36 @@ namespace MU0QK3
             listBoxJegyek.ValueMember = "Id";
             jegyek2 = jegyek;
             
+
         }
 
         private void btnFelvitel_Click(object sender, EventArgs e)
         {
-            Tanulok akttanulo = new Tanulok();
-            akttanulo =(Tanulok) listBoxTanulok.SelectedItem;
-            Jegyek ujjegy = new Jegyek();
-            ujjegy.Dátum = dateTimePicker1.Value;
-            ujjegy.Jegy = (int)comboBoxOsztalyzat.SelectedItem;
-            ujjegy.Mire =(string) comboBoxTema.SelectedItem;
-            ujjegy.TanuloFK = akttanulo.Id;
-            context.Jegyeks.Add(ujjegy);
-            context.SaveChanges();
-            jegyfeltolt();
+            if (comboBoxOsztalyzat.SelectedItem!=null)
+            {
+                if (comboBoxTema.SelectedItem != null)
+                {
+                    Tanulok akttanulo = new Tanulok();
+                    akttanulo = (Tanulok)listBoxTanulok.SelectedItem;
+                    Jegyek ujjegy = new Jegyek();
+                    ujjegy.Dátum = dateTimePicker1.Value;
+                    ujjegy.Jegy = (int)comboBoxOsztalyzat.SelectedItem;
+                    ujjegy.Mire = (string)comboBoxTema.SelectedItem;
+                    ujjegy.TanuloFK = akttanulo.Id;
+                    context.Jegyeks.Add(ujjegy);
+                    context.SaveChanges();
+                    jegyfeltolt();
+                }
+                else
+                {
+                    MessageBox.Show("Válasszon témát!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Válasszon jegyet!");
+            }
+            
 
 
         }
@@ -128,9 +147,34 @@ namespace MU0QK3
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            context.Jegyeks.Remove(aktjegy);
-            context.SaveChanges();
-            jegyfeltolt();
+            if (listBoxJegyek.SelectedItem!=null)
+            {
+                context.Jegyeks.Remove(aktjegy);
+                context.SaveChanges();
+                jegyfeltolt();
+            }
+            else
+            {
+                MessageBox.Show("Válasszon jegyet!");
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            StreamReader sr = new StreamReader(ofd.FileName,Encoding.UTF8);
+            
+            string[] sor=sr.ReadLine().Split(',');
+
+            foreach (var item in sor)
+            {
+                comboBoxTema.Items.Add(item);
+            }
+
+
+            
         }
     }
 }

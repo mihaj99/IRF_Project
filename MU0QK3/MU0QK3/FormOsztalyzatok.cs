@@ -12,42 +12,81 @@ namespace MU0QK3
 {
     public partial class FormOsztalyzatok : Form
     {
-        Database1Entities context = new Database1Entities();
-        List<Jegyek> jegyek = new List<Jegyek>();
-        public Jegyek aktjegy = new Jegyek();
+        int szamlalo;
+        int maxhossz = 0;
         public FormOsztalyzatok()
         {
             InitializeComponent();
-            feltolt();
-            kiir();
-            listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
+            IdKiir();
+            MaximumHossz();
+            NevekKiir();
+            MaximumHossz();
+            JegyKiir();
+            panel1.AutoScroll = true;
 
         }
-
-        private void ListBoxJegyek_SelectedIndexChanged(object sender, EventArgs e)
+        private void JegyKiir()
         {
-            aktjegy = (Jegyek)listBoxJegyek.SelectedItem;
-        }
 
-        public void feltolt()
-        {
-            foreach (var item in context.Jegyeks)
+
+            szamlalo = 0;
+            foreach (var item in FormAtlagok.vegsojegyek)
             {
-                if (item.TanuloFK == FormUjJegy.akttan.Id)
+                AtlagCimke lbl = new AtlagCimke();
+                lbl.Text = item.Osztalyzat.ToString();
+                lbl.Left = 1 + maxhossz + 30;
+                lbl.Top = 1 + szamlalo * lbl.Height;
+                panel1.Controls.Add(lbl);
+                szamlalo++;
+
+            }
+        }
+
+        private void MaximumHossz()
+        {
+            maxhossz = 0;
+
+            foreach (AtlagCimke item in panel1.Controls)
+            {
+
+
+                if (item.Width > maxhossz)
                 {
-                    jegyek.Add(item);
+                    maxhossz = item.Width;
                 }
             }
-            listBoxJegyek.DataSource = jegyek;
-            listBoxJegyek.DisplayMember = "Jegy";
-            listBoxJegyek.ValueMember = "Id";
-        }
-        
 
-        public void kiir()
+
+        }
+
+        private void NevekKiir()
         {
-            labelNev.Text = FormUjJegy.akttan.Név + " osztályzatai";
-            labelDatum.Text = aktjegy.Dátum.ToString();
+
+
+            szamlalo = 0;
+            foreach (var item in FormAtlagok.vegsojegyek)
+            {
+                AtlagCimke lbl = new AtlagCimke();
+                lbl.Text = item.Nev;
+                lbl.Left = 1 + maxhossz;
+                lbl.Top = 1 + szamlalo * lbl.Height;
+                panel1.Controls.Add(lbl);
+                szamlalo++;
+
+            }
+        }
+        private void IdKiir()
+        {
+            foreach (var item in FormAtlagok.vegsojegyek)
+            {
+                AtlagCimke lbl = new AtlagCimke();
+                lbl.Text = item.ID.ToString();
+                lbl.Left = 1;
+                lbl.Top = 1 + szamlalo * lbl.Height;
+                panel1.Controls.Add(lbl);
+                szamlalo++;
+
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MU0QK3
 {
-    class VegsoJegy
+    public class VegsoJegy
     {
         public int ID { get; set; }
         public string Nev { get; set; }

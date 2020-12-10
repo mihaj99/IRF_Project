@@ -12,8 +12,10 @@ namespace MU0QK3
 {
     public partial class FormAtlagok : Form
     {
-        List<atlagok> _atlagok = new List<atlagok>();
         
+        List<atlag> atlagok = new List<atlag>();
+        public static List<VegsoJegy> vegsojegyek = new List<VegsoJegy>();
+
         int szamlalo;
         int maxhossz = 0;
         
@@ -29,7 +31,10 @@ namespace MU0QK3
         public FormAtlagok()
         {
             InitializeComponent();
-            Atlagszamitas();
+            vegsojegyek.Clear();
+            
+
+        Atlagszamitas();
             Diagram();
             
             IdKiir();
@@ -45,10 +50,10 @@ namespace MU0QK3
             
             
             szamlalo = 0;
-            foreach (var item in _atlagok)
+            foreach (var item in atlagok)
             {
                 AtlagCimke lbl = new AtlagCimke();
-                lbl.Text = item.atlag.ToString();
+                lbl.Text = item.Atlag.ToString();
                 lbl.Left = 1+maxhossz+30;
                 lbl.Top = 1 + szamlalo * lbl.Height;
                 panel1.Controls.Add(lbl);
@@ -79,7 +84,7 @@ namespace MU0QK3
             
 
             szamlalo = 0;
-            foreach (var item in _atlagok)
+            foreach (var item in atlagok)
             {
                 AtlagCimke lbl = new AtlagCimke();
                 lbl.Text = item.nev;
@@ -92,7 +97,7 @@ namespace MU0QK3
         }
         private void IdKiir()
         {
-            foreach (var item in _atlagok)
+            foreach (var item in atlagok)
             {
                 AtlagCimke lbl = new AtlagCimke();
                 lbl.Text = item.ID.ToString();
@@ -106,7 +111,7 @@ namespace MU0QK3
 
         private void Diagram()
         {
-            chartAtlagok.DataSource = _atlagok;
+            chartAtlagok.DataSource = atlagok;
             var series = chartAtlagok.Series[0];
             series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
             series.XValueMember = "nev";
@@ -139,13 +144,28 @@ namespace MU0QK3
 
                 }
 
-                atlagok ujatlag = new atlagok();
+                atlag ujatlag = new atlag();
                 ujatlag.ID = tanulo.Id;
                 ujatlag.nev = tanulo.Név;
-                ujatlag.atlag = osszeg / darabszam;
-                _atlagok.Add(ujatlag);
+                ujatlag.Atlag = osszeg / darabszam;
+                atlagok.Add(ujatlag);
 
             }
+        }
+
+        private void buttonOsztalyzatok_Click(object sender, EventArgs e)
+        {
+            
+            foreach (atlag item in atlagok)
+            {
+                VegsoJegy uj = new VegsoJegy();
+                uj.ID = item.ID;
+                uj.Nev = item.nev;
+                uj.Osztalyzat = item.Atlag;
+                vegsojegyek.Add(uj);
+            }
+            FormOsztalyzatok fo = new FormOsztalyzatok();
+            fo.ShowDialog();
         }
     }
 }

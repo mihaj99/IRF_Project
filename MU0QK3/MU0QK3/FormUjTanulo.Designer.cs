@@ -38,6 +38,15 @@ namespace MU0QK3
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.labelKereses = new System.Windows.Forms.Label();
+            this.listBoxTanulok = new System.Windows.Forms.ListBox();
+            this.textBoxKereses = new System.Windows.Forms.TextBox();
+            this.buttonTorles = new System.Windows.Forms.Button();
+            this.checkBoxSNIKijelez = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelNevKijelez = new System.Windows.Forms.Label();
+            this.labelSzuldatKijelez = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNev
@@ -119,11 +128,101 @@ namespace MU0QK3
             this.labelKereses.Size = new System.Drawing.Size(0, 13);
             this.labelKereses.TabIndex = 10;
             // 
+            // listBoxTanulok
+            // 
+            this.listBoxTanulok.FormattingEnabled = true;
+            this.listBoxTanulok.Location = new System.Drawing.Point(346, 42);
+            this.listBoxTanulok.Name = "listBoxTanulok";
+            this.listBoxTanulok.Size = new System.Drawing.Size(207, 277);
+            this.listBoxTanulok.TabIndex = 11;
+            this.listBoxTanulok.SelectedIndexChanged += new System.EventHandler(this.listBoxTanulok_SelectedIndexChanged);
+            // 
+            // textBoxKereses
+            // 
+            this.textBoxKereses.Location = new System.Drawing.Point(393, 16);
+            this.textBoxKereses.Name = "textBoxKereses";
+            this.textBoxKereses.Size = new System.Drawing.Size(160, 20);
+            this.textBoxKereses.TabIndex = 12;
+            this.textBoxKereses.TextChanged += new System.EventHandler(this.textBoxKereses_TextChanged);
+            // 
+            // buttonTorles
+            // 
+            this.buttonTorles.Location = new System.Drawing.Point(565, 174);
+            this.buttonTorles.Name = "buttonTorles";
+            this.buttonTorles.Size = new System.Drawing.Size(75, 23);
+            this.buttonTorles.TabIndex = 14;
+            this.buttonTorles.Text = "Törlés";
+            this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
+            // 
+            // checkBoxSNIKijelez
+            // 
+            this.checkBoxSNIKijelez.AutoSize = true;
+            this.checkBoxSNIKijelez.Location = new System.Drawing.Point(678, 138);
+            this.checkBoxSNIKijelez.Name = "checkBoxSNIKijelez";
+            this.checkBoxSNIKijelez.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxSNIKijelez.TabIndex = 17;
+            this.checkBoxSNIKijelez.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(562, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "SNI:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(562, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Szül. dátum:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(562, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Név:";
+            // 
+            // labelNevKijelez
+            // 
+            this.labelNevKijelez.AutoSize = true;
+            this.labelNevKijelez.Location = new System.Drawing.Point(657, 62);
+            this.labelNevKijelez.Name = "labelNevKijelez";
+            this.labelNevKijelez.Size = new System.Drawing.Size(35, 13);
+            this.labelNevKijelez.TabIndex = 21;
+            this.labelNevKijelez.Text = "label4";
+            // 
+            // labelSzuldatKijelez
+            // 
+            this.labelSzuldatKijelez.AutoSize = true;
+            this.labelSzuldatKijelez.Location = new System.Drawing.Point(658, 96);
+            this.labelSzuldatKijelez.Name = "labelSzuldatKijelez";
+            this.labelSzuldatKijelez.Size = new System.Drawing.Size(35, 13);
+            this.labelSzuldatKijelez.TabIndex = 22;
+            this.labelSzuldatKijelez.Text = "label5";
+            // 
             // FormUjTanulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelSzuldatKijelez);
+            this.Controls.Add(this.labelNevKijelez);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBoxSNIKijelez);
+            this.Controls.Add(this.buttonTorles);
+            this.Controls.Add(this.textBoxKereses);
+            this.Controls.Add(this.listBoxTanulok);
             this.Controls.Add(this.labelKereses);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -153,5 +252,14 @@ namespace MU0QK3
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label labelKereses;
+        private System.Windows.Forms.ListBox listBoxTanulok;
+        private System.Windows.Forms.TextBox textBoxKereses;
+        private System.Windows.Forms.Button buttonTorles;
+        private System.Windows.Forms.CheckBox checkBoxSNIKijelez;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelNevKijelez;
+        private System.Windows.Forms.Label labelSzuldatKijelez;
     }
 }

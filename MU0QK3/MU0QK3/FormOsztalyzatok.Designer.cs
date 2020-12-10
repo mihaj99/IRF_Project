@@ -29,56 +29,31 @@ namespace MU0QK3
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxJegyek = new System.Windows.Forms.ListBox();
-            this.labelNev = new System.Windows.Forms.Label();
-            this.labelDatum = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // listBoxJegyek
+            // panel1
             // 
-            this.listBoxJegyek.FormattingEnabled = true;
-            this.listBoxJegyek.Location = new System.Drawing.Point(12, 12);
-            this.listBoxJegyek.Name = "listBoxJegyek";
-            this.listBoxJegyek.Size = new System.Drawing.Size(231, 394);
-            this.listBoxJegyek.TabIndex = 0;
-            // 
-            // labelNev
-            // 
-            this.labelNev.AutoSize = true;
-            this.labelNev.Location = new System.Drawing.Point(496, 12);
-            this.labelNev.Name = "labelNev";
-            this.labelNev.Size = new System.Drawing.Size(35, 13);
-            this.labelNev.TabIndex = 1;
-            this.labelNev.Text = "label1";
-            // 
-            // labelDatum
-            // 
-            this.labelDatum.AutoSize = true;
-            this.labelDatum.Location = new System.Drawing.Point(283, 69);
-            this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(60, 13);
-            this.labelDatum.TabIndex = 2;
-            this.labelDatum.Text = "labelDatum";
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(634, 356);
+            this.panel1.TabIndex = 0;
             // 
             // FormOsztalyzatok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelDatum);
-            this.Controls.Add(this.labelNev);
-            this.Controls.Add(this.listBoxJegyek);
+            this.ClientSize = new System.Drawing.Size(634, 356);
+            this.Controls.Add(this.panel1);
             this.Name = "FormOsztalyzatok";
             this.Text = "FormOsztalyzatok";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBoxJegyek;
-        private System.Windows.Forms.Label labelNev;
-        private System.Windows.Forms.Label labelDatum;
+        private System.Windows.Forms.Panel panel1;
     }
 }

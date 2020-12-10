@@ -13,18 +13,32 @@ namespace MU0QK3
     public partial class FormUjTanulo : Form
     {
         Database1Entities context = new Database1Entities();
+        List<Tanulok> tanulok = new List<Tanulok>();
+        Tanulok akttan = new Tanulok();
         public FormUjTanulo()
         {
             InitializeComponent();
+
+            checkBoxSNIKijelez.Enabled = false;
+            buttonTorles.Enabled = false;
+            feltolt();
             
             
             
             
         }
 
-        
+        private void feltolt()
+        {
+            var ker_eredmeny = (from x in context.Tanuloks
+                                where x.Név.Contains(textBoxKereses.Text)
+                                select x);
+            listBoxTanulok.DataSource = ker_eredmeny.ToList();
+            listBoxTanulok.DisplayMember = "Név";
+            listBoxTanulok.ValueMember = "Id";
+        }
 
-        
+
 
 
         private void FormUjTanulo_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,7 +69,50 @@ namespace MU0QK3
 
                 MessageBox.Show("Hiba a mentés során!");
             }
-            MessageBox.Show("Felvitel OK!");
+            
+            feltolt();
+        }
+
+        private void textBoxKereses_TextChanged(object sender, EventArgs e)
+        {
+            feltolt();
+        }
+
+        private void listBoxTanulok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            akttan = (Tanulok)listBoxTanulok.SelectedItem;
+            labelNevKijelez.Text = akttan.Név;
+            labelSzuldatKijelez.Text = akttan.Születési_dátum.ToString();
+            checkBoxSNIKijelez.Checked =(bool) akttan.SNI;
+            buttonTorles.Enabled = true;
+
+        }
+
+        private void buttonTorles_Click(object sender, EventArgs e)
+        {
+            foreach (Jegyek item in context.Jegyeks)
+            {
+                if (item.TanuloFK==akttan.Id)
+                {
+                    context.Jegyeks.Remove(item);
+                    
+
+                }
+            }
+            context.Tanuloks.Remove(akttan);
+
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hiba a mentés során!");
+            }
+            
+            feltolt();
         }
     }
 }

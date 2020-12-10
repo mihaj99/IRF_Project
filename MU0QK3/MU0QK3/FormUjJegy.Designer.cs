@@ -39,7 +39,6 @@ namespace MU0QK3
             this.textBoxKereses = new System.Windows.Forms.TextBox();
             this.labelKereses = new System.Windows.Forms.Label();
             this.btnFelvitel = new System.Windows.Forms.Button();
-            this.buttonOsztalyzatok = new System.Windows.Forms.Button();
             this.listBoxJegyek = new System.Windows.Forms.ListBox();
             this.labelTem = new System.Windows.Forms.Label();
             this.labelDat = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace MU0QK3
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTorles = new System.Windows.Forms.Button();
             this.labelCim = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelJegy
@@ -134,16 +134,6 @@ namespace MU0QK3
             this.btnFelvitel.UseVisualStyleBackColor = true;
             this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
-            // buttonOsztalyzatok
-            // 
-            this.buttonOsztalyzatok.Location = new System.Drawing.Point(216, 395);
-            this.buttonOsztalyzatok.Name = "buttonOsztalyzatok";
-            this.buttonOsztalyzatok.Size = new System.Drawing.Size(75, 43);
-            this.buttonOsztalyzatok.TabIndex = 13;
-            this.buttonOsztalyzatok.Text = "Osztályzatok kezelése";
-            this.buttonOsztalyzatok.UseVisualStyleBackColor = true;
-            this.buttonOsztalyzatok.Click += new System.EventHandler(this.buttonOsztalyzatok_Click);
-            // 
             // listBoxJegyek
             // 
             this.listBoxJegyek.FormattingEnabled = true;
@@ -204,11 +194,22 @@ namespace MU0QK3
             this.labelCim.Size = new System.Drawing.Size(0, 13);
             this.labelCim.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(252, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 21);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Témalista kiválasztása";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormUjJegy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelCim);
             this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.label2);
@@ -216,7 +217,6 @@ namespace MU0QK3
             this.Controls.Add(this.labelDat);
             this.Controls.Add(this.labelTem);
             this.Controls.Add(this.listBoxJegyek);
-            this.Controls.Add(this.buttonOsztalyzatok);
             this.Controls.Add(this.btnFelvitel);
             this.Controls.Add(this.labelKereses);
             this.Controls.Add(this.textBoxKereses);
@@ -245,7 +245,6 @@ namespace MU0QK3
         private System.Windows.Forms.TextBox textBoxKereses;
         private System.Windows.Forms.Label labelKereses;
         private System.Windows.Forms.Button btnFelvitel;
-        private System.Windows.Forms.Button buttonOsztalyzatok;
         private System.Windows.Forms.ListBox listBoxJegyek;
         private System.Windows.Forms.Label labelTem;
         private System.Windows.Forms.Label labelDat;
@@ -253,5 +252,6 @@ namespace MU0QK3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTorles;
         private System.Windows.Forms.Label labelCim;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -76,7 +76,7 @@
     <Compile Include="AtlagCimke.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="atlagok.cs" />
+    <Compile Include="atlag.cs" />
     <Compile Include="FormAtlagok.cs">
       <SubType>Form</SubType>
     </Compile>
