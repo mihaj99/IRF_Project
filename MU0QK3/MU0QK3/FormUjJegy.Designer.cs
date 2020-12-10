@@ -197,6 +197,8 @@ namespace MU0QK3
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(252, 335);
+            this.button1.MaximumSize = new System.Drawing.Size(134, 21);
+            this.button1.MinimumSize = new System.Drawing.Size(134, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 21);
             this.button1.TabIndex = 22;
@@ -227,6 +229,8 @@ namespace MU0QK3
             this.Controls.Add(this.labelTema);
             this.Controls.Add(this.labelDatum);
             this.Controls.Add(this.labelJegy);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormUjJegy";
             this.Text = "FormUjJegy";
             this.ResumeLayout(false);

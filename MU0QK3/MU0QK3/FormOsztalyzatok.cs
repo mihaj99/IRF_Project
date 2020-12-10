@@ -17,8 +17,8 @@ namespace MU0QK3
         public FormOsztalyzatok()
         {
             InitializeComponent();
-            IdKiir();
-            MaximumHossz();
+            
+           
             NevekKiir();
             MaximumHossz();
             JegyKiir();
@@ -75,18 +75,6 @@ namespace MU0QK3
 
             }
         }
-        private void IdKiir()
-        {
-            foreach (var item in FormAtlagok.vegsojegyek)
-            {
-                AtlagCimke lbl = new AtlagCimke();
-                lbl.Text = item.ID.ToString();
-                lbl.Left = 1;
-                lbl.Top = 1 + szamlalo * lbl.Height;
-                panel1.Controls.Add(lbl);
-                szamlalo++;
-
-            }
-        }
+        
     }
 }

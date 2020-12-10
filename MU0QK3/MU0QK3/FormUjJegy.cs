@@ -26,7 +26,6 @@ namespace MU0QK3
             osztalyzatok();
             temak();
             
-            
             listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
             listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
             textBoxKereses.TextChanged += TextBoxKereses_TextChanged;
@@ -62,6 +61,17 @@ namespace MU0QK3
             
         }
 
+        private void temak()
+        {
+            StreamReader sr = new StreamReader("temak.txt", Encoding.UTF8);
+
+            string[] sor = sr.ReadLine().Split(',');
+
+            foreach (var item in sor)
+            {
+                comboBoxTema.Items.Add(item);
+            }
+        }
         private void feltolt()
         {
             var ker_eredmeny = (from x in context.Tanuloks
@@ -79,11 +89,7 @@ namespace MU0QK3
             comboBoxOsztalyzat.Items.Add(4);
             comboBoxOsztalyzat.Items.Add(5);
         }
-        private void temak()
-        {
-            
-            comboBoxTema.Items.Add("Teszt");
-        }
+        
 
         public void jegyfeltolt()
         {

@@ -37,15 +37,17 @@ namespace MU0QK3
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(634, 356);
+            this.panel1.Size = new System.Drawing.Size(490, 356);
             this.panel1.TabIndex = 0;
             // 
             // FormOsztalyzatok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 356);
+            this.ClientSize = new System.Drawing.Size(490, 356);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(506, 395);
+            this.MinimumSize = new System.Drawing.Size(506, 395);
             this.Name = "FormOsztalyzatok";
             this.Text = "FormOsztalyzatok";
             this.ResumeLayout(false);

@@ -37,8 +37,7 @@ namespace MU0QK3
         Atlagszamitas();
             Diagram();
             
-            IdKiir();
-            MaximumHossz();
+            
             NevekKiir();
             MaximumHossz();
             AtlagKiir();
@@ -95,19 +94,7 @@ namespace MU0QK3
 
             }
         }
-        private void IdKiir()
-        {
-            foreach (var item in atlagok)
-            {
-                AtlagCimke lbl = new AtlagCimke();
-                lbl.Text = item.ID.ToString();
-                lbl.Left = 1;
-                lbl.Top = 1 + szamlalo * lbl.Height;
-                panel1.Controls.Add(lbl);
-                szamlalo++;
-
-            }
-        }
+        
 
         private void Diagram()
         {

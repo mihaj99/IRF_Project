@@ -36,7 +36,7 @@ namespace MU0QK3
             // 
             // btnUjTanulo
             // 
-            this.btnUjTanulo.Location = new System.Drawing.Point(323, 138);
+            this.btnUjTanulo.Location = new System.Drawing.Point(174, 117);
             this.btnUjTanulo.Name = "btnUjTanulo";
             this.btnUjTanulo.Size = new System.Drawing.Size(147, 23);
             this.btnUjTanulo.TabIndex = 0;
@@ -46,7 +46,7 @@ namespace MU0QK3
             // 
             // btnJegyek
             // 
-            this.btnJegyek.Location = new System.Drawing.Point(323, 167);
+            this.btnJegyek.Location = new System.Drawing.Point(174, 146);
             this.btnJegyek.Name = "btnJegyek";
             this.btnJegyek.Size = new System.Drawing.Size(147, 23);
             this.btnJegyek.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace MU0QK3
             // 
             // buttonAtlagok
             // 
-            this.buttonAtlagok.Location = new System.Drawing.Point(323, 196);
+            this.buttonAtlagok.Location = new System.Drawing.Point(174, 175);
             this.buttonAtlagok.Name = "buttonAtlagok";
             this.buttonAtlagok.Size = new System.Drawing.Size(147, 23);
             this.buttonAtlagok.TabIndex = 2;
@@ -68,10 +68,12 @@ namespace MU0QK3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(504, 338);
             this.Controls.Add(this.buttonAtlagok);
             this.Controls.Add(this.btnJegyek);
             this.Controls.Add(this.btnUjTanulo);
+            this.MaximumSize = new System.Drawing.Size(520, 377);
+            this.MinimumSize = new System.Drawing.Size(520, 377);
             this.Name = "FormFo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

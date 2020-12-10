@@ -36,7 +36,6 @@ namespace MU0QK3
             this.txtNev = new System.Windows.Forms.TextBox();
             this.chbSNI = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.labelKereses = new System.Windows.Forms.Label();
             this.listBoxTanulok = new System.Windows.Forms.ListBox();
             this.textBoxKereses = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@ namespace MU0QK3
             this.label3 = new System.Windows.Forms.Label();
             this.labelNevKijelez = new System.Windows.Forms.Label();
             this.labelSzuldatKijelez = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNev
@@ -110,15 +110,6 @@ namespace MU0QK3
             this.btnSave.Text = "Felvitel";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(232, 162);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Mégse";
-            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // labelKereses
             // 
@@ -209,11 +200,21 @@ namespace MU0QK3
             this.labelSzuldatKijelez.TabIndex = 22;
             this.labelSzuldatKijelez.Text = "label5";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(343, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Keresés:";
+            // 
             // FormUjTanulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelSzuldatKijelez);
             this.Controls.Add(this.labelNevKijelez);
             this.Controls.Add(this.label1);
@@ -224,7 +225,6 @@ namespace MU0QK3
             this.Controls.Add(this.textBoxKereses);
             this.Controls.Add(this.listBoxTanulok);
             this.Controls.Add(this.labelKereses);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chbSNI);
             this.Controls.Add(this.txtNev);
@@ -232,6 +232,8 @@ namespace MU0QK3
             this.Controls.Add(this.lblSNI);
             this.Controls.Add(this.lblSzulDat);
             this.Controls.Add(this.lblNev);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormUjTanulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormUjTanulo";
@@ -250,7 +252,6 @@ namespace MU0QK3
         private System.Windows.Forms.TextBox txtNev;
         private System.Windows.Forms.CheckBox chbSNI;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label labelKereses;
         private System.Windows.Forms.ListBox listBoxTanulok;
         private System.Windows.Forms.TextBox textBoxKereses;
@@ -261,5 +262,6 @@ namespace MU0QK3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelNevKijelez;
         private System.Windows.Forms.Label labelSzuldatKijelez;
+        private System.Windows.Forms.Label label4;
     }
 }

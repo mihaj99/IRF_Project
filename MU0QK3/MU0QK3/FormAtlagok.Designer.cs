@@ -29,9 +29,9 @@ namespace MU0QK3
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartAtlagok = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonOsztalyzatok = new System.Windows.Forms.Button();
@@ -40,16 +40,16 @@ namespace MU0QK3
             // 
             // chartAtlagok
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartAtlagok.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartAtlagok.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartAtlagok.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartAtlagok.Legends.Add(legend2);
             this.chartAtlagok.Location = new System.Drawing.Point(12, 365);
             this.chartAtlagok.Name = "chartAtlagok";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartAtlagok.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartAtlagok.Series.Add(series2);
             this.chartAtlagok.Size = new System.Drawing.Size(845, 300);
             this.chartAtlagok.TabIndex = 0;
             this.chartAtlagok.Text = "chart1";
@@ -76,10 +76,12 @@ namespace MU0QK3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 692);
+            this.ClientSize = new System.Drawing.Size(922, 687);
             this.Controls.Add(this.buttonOsztalyzatok);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartAtlagok);
+            this.MaximumSize = new System.Drawing.Size(938, 731);
+            this.MinimumSize = new System.Drawing.Size(938, 726);
             this.Name = "FormAtlagok";
             this.Text = "FormAtlagok";
             ((System.ComponentModel.ISupportInitialize)(this.chartAtlagok)).EndInit();
