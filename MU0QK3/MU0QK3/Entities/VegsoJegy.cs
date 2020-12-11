@@ -17,6 +17,7 @@ namespace MU0QK3
             get { return _osztalyzat; }
             set {
                 _osztalyzat = value;
+                
                 if (_osztalyzat<1.7)
                 {
                     _osztalyzat = 1;
@@ -33,9 +34,13 @@ namespace MU0QK3
                 {
                     _osztalyzat = 4;
                 }
-                else
+                else if (_osztalyzat>4.5)
                 {
                     _osztalyzat = 5;
+                }
+                else
+                {
+                    _osztalyzat = 1;
                 }
 
                 

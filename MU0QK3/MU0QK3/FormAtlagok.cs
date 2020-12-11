@@ -129,6 +129,7 @@ namespace MU0QK3
                 ujatlag.nev = tanulo.Név;
                 ujatlag.Atlag = Math.Round(osszeg / darabszam,2);
                 atlagok.Add(ujatlag);
+                
 
             }
         }

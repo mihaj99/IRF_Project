@@ -243,7 +243,6 @@ namespace MU0QK3
             this.Name = "FormUjTanulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tanulók kezelése";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUjTanulo_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

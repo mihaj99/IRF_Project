@@ -13,12 +13,10 @@ namespace MU0QK3
     public partial class FormOsztalyzatok : Form
     {
         int szamlalo;
-        int maxhossz = 0;
+        int maxhossz;
         public FormOsztalyzatok()
         {
             InitializeComponent();
-            
-           
             NevekKiir();
             MaximumHossz();
             JegyKiir();
@@ -45,24 +43,17 @@ namespace MU0QK3
         private void MaximumHossz()
         {
             maxhossz = 0;
-
             foreach (AtlagCimke item in panel1.Controls)
             {
-
-
                 if (item.Width > maxhossz)
                 {
                     maxhossz = item.Width;
                 }
             }
-
-
         }
 
         private void NevekKiir()
         {
-
-
             szamlalo = 0;
             foreach (var item in FormAtlagok.vegsojegyek)
             {

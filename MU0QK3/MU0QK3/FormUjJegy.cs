@@ -66,11 +66,8 @@ namespace MU0QK3
             buttonTorles.Enabled = false;
             labelDat.Text = "";
             labelTem.Text = "";
-
-            
             akttan = (Tanulok)listBoxTanulok.SelectedItem;
-            
-            jegyfeltolt();
+            Jegyfeltolt();
             labelCim.Text = String.Format("{0} osztályzatai", akttan.Név);
             
 
@@ -79,13 +76,12 @@ namespace MU0QK3
         private void Temak()
         {
             StreamReader sr = new StreamReader("temak.txt", Encoding.UTF8);
-
             string[] sor = sr.ReadLine().Split(',');
-
             foreach (var item in sor)
             {
                 comboBoxTema.Items.Add(item);
             }
+            sr.Close();
         }
         private void Feltolt()
         {
@@ -106,7 +102,7 @@ namespace MU0QK3
         }
         
 
-        public void jegyfeltolt()
+        public void Jegyfeltolt()
         { 
             jegyek.Clear();
 
@@ -135,7 +131,7 @@ namespace MU0QK3
                     ujjegy.TanuloFK = akttanulo.Id;
                     context.Jegyeks.Add(ujjegy);
                     context.SaveChanges();
-                    jegyfeltolt();
+                    Jegyfeltolt();
                 }
                 else
                 {
@@ -146,9 +142,6 @@ namespace MU0QK3
             {
                 MessageBox.Show("Válasszon jegyet!");
             }
-            
-
-
         }
 
         
@@ -158,22 +151,18 @@ namespace MU0QK3
             
                 context.Jegyeks.Remove(aktjegy);
                 context.SaveChanges();
-                jegyfeltolt();
-            
-            buttonTorles.Enabled = false; 
+                Jegyfeltolt();
+                buttonTorles.Enabled = false; 
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            
             if (ofd.ShowDialog()==DialogResult.OK)
             {
                 StreamReader sr = new StreamReader(ofd.FileName, Encoding.UTF8);
-
                 string[] sor = sr.ReadLine().Split(',');
-
                 foreach (var item in sor)
                 {
                     comboBoxTema.Items.Add(item);
