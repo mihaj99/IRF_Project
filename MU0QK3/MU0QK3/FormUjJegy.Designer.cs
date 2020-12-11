@@ -29,6 +29,7 @@ namespace MU0QK3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUjJegy));
             this.labelJegy = new System.Windows.Forms.Label();
             this.labelDatum = new System.Windows.Forms.Label();
             this.labelTema = new System.Windows.Forms.Label();
@@ -137,6 +138,11 @@ namespace MU0QK3
             // listBoxJegyek
             // 
             this.listBoxJegyek.FormattingEnabled = true;
+            this.listBoxJegyek.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
             this.listBoxJegyek.Location = new System.Drawing.Point(373, 63);
             this.listBoxJegyek.Name = "listBoxJegyek";
             this.listBoxJegyek.Size = new System.Drawing.Size(223, 186);
@@ -229,10 +235,12 @@ namespace MU0QK3
             this.Controls.Add(this.labelTema);
             this.Controls.Add(this.labelDatum);
             this.Controls.Add(this.labelJegy);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormUjJegy";
-            this.Text = "FormUjJegy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Jegyek kezelése";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,12 +16,15 @@ namespace MU0QK3
         Database1Entities context = new Database1Entities();
         public static Tanulok akttan = new Tanulok();
         public Jegyek aktjegy = new Jegyek();
-        List<Jegyek> jegyek2 = new List<Jegyek>();
+        BindingList<Jegyek> jegyek = new BindingList<Jegyek>();
         
 
         public FormUjJegy()
         {
             InitializeComponent();
+            listBoxJegyek.DataSource = jegyek;
+            listBoxJegyek.DisplayMember = "Jegy";
+            listBoxJegyek.ValueMember = "Id";
             feltolt();
             osztalyzatok();
             temak();
@@ -41,7 +44,7 @@ namespace MU0QK3
         private void ListBoxJegyek_SelectedIndexChanged(object sender, EventArgs e)
         {
             aktjegy=(Jegyek)listBoxJegyek.SelectedItem;
-            foreach (var item in jegyek2)
+            foreach (var item in jegyek)
             {
                 if (item.Id==aktjegy.Id)
                 {
@@ -94,8 +97,11 @@ namespace MU0QK3
         public void jegyfeltolt()
         {
 
-            List<Jegyek> jegyek = new List<Jegyek>();
-
+            
+            jegyek.Clear();
+            
+            
+            MessageBox.Show(""+jegyek.Count()) ;
             foreach (var item in context.Jegyeks)
             {
                 if (item.TanuloFK == akttan.Id)
@@ -103,11 +109,13 @@ namespace MU0QK3
                     jegyek.Add(item);
                 }
             }
-            listBoxJegyek.DataSource = jegyek;
-            listBoxJegyek.DisplayMember = "Jegy";
-            listBoxJegyek.ValueMember = "Id";
-            jegyek2 = jegyek;
             
+            listBoxJegyek.Refresh();
+            
+            
+            
+            
+
 
         }
 
@@ -130,7 +138,7 @@ namespace MU0QK3
                 }
                 else
                 {
-                    MessageBox.Show("Válasszon témát!");
+                    MessageBox.Show(this,"Válasszon témát!","Adatfelviteli hiba!");
                 }
             }
             else
@@ -142,14 +150,7 @@ namespace MU0QK3
 
         }
 
-        private void buttonOsztalyzatok_Click(object sender, EventArgs e)
-        {
-
-            
-
-
-
-        }
+        
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {

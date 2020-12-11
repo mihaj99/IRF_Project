@@ -29,6 +29,7 @@ namespace MU0QK3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUjTanulo));
             this.lblNev = new System.Windows.Forms.Label();
             this.lblSzulDat = new System.Windows.Forms.Label();
             this.lblSNI = new System.Windows.Forms.Label();
@@ -232,11 +233,12 @@ namespace MU0QK3
             this.Controls.Add(this.lblSNI);
             this.Controls.Add(this.lblSzulDat);
             this.Controls.Add(this.lblNev);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormUjTanulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormUjTanulo";
+            this.Text = "Tanulók kezelése";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUjTanulo_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

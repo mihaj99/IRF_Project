@@ -31,10 +31,13 @@ namespace MU0QK3
         public FormAtlagok()
         {
             InitializeComponent();
-            vegsojegyek.Clear();
             
 
-        Atlagszamitas();
+        
+
+
+
+            Atlagszamitas();
             Diagram();
             
             
@@ -100,10 +103,11 @@ namespace MU0QK3
         {
             chartAtlagok.DataSource = atlagok;
             var series = chartAtlagok.Series[0];
-            series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series.XValueMember = "nev";
             series.YValueMembers = "atlag";
             series.BorderWidth = 2;
+            
 
             var legend = chartAtlagok.Legends[0];
             legend.Enabled = false;
@@ -112,6 +116,9 @@ namespace MU0QK3
             chartArea.AxisX.MajorGrid.Enabled = false;
             chartArea.AxisY.MajorGrid.Enabled = false;
             chartArea.AxisY.IsStartedFromZero = false;
+            chartArea.AxisX.Interval = 1;
+            chartArea.AxisY.Minimum = 1;
+            chartArea.AxisY.Maximum = 5;
         }
 
         private void Atlagszamitas()
@@ -142,7 +149,8 @@ namespace MU0QK3
 
         private void buttonOsztalyzatok_Click(object sender, EventArgs e)
         {
-            
+            vegsojegyek.Clear();
+
             foreach (atlag item in atlagok)
             {
                 VegsoJegy uj = new VegsoJegy();
@@ -154,5 +162,7 @@ namespace MU0QK3
             FormOsztalyzatok fo = new FormOsztalyzatok();
             fo.ShowDialog();
         }
+
+    
     }
 }

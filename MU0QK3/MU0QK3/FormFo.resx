@@ -120,4 +120,29 @@
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAD////////////////+/v7/////////////////////////////////////////////////////////
+        /////////////////////////v7+//39/f//////////////////////////////////////////////
+        /////////////////////////v7+//n49////////f3+//7+/v//////////////////////////////
+        ///////////////////+/v7///////v6+v9DVmX/lZ6l///////9/v7//Pz9//7+/v/+/v7/////////
+        /////////////////////////Pz8//////+rs7r/V2Zz/2d6iP9TaXn/8O/u///////+/v7///////39
+        /f/+/v7///////////////////////3+/v//////cICM/6+ytf//+/f/eY+g/yFDX/+Xoqv/5unr//Lv
+        7f////////////3+/v/7/P3//Pz8//7+/v//////ys7S/3WDjv/k4+L/zM3O/+nm4//X3eP/YniJ/z9X
+        av8aR2n/qayt///79//+/v3//////////////////////4mUnf+jqq//8fDv///////Nzs7/19XU////
+        ///d4OL/MlZx/zNPZP8QQWf/Pl94/3KGlf+qsrn/5eXl//X19f+AjZb/1NXV//v7+////////////93d
+        3f/Ky8z/vr6+/5uWkv/19/n/lqu8/2SFn/9ObYT/HEJh/112jf+5v8T/hZCY/+3r6f///////v7+//7+
+        /v///////////7+/v//Pz9D/xcXF//Pu6//7+/n//////4mYo/+cqLL/dYCJ/6mtsP/5+Pf/////////
+        ///+/v7//////9jY2P/U1NT//////+Hh4f+3uLn/0tPT/7i5uv+jo6L//////5yeoP/MzMz///////7+
+        /v////////////Hx8f/Jycn///////7+/v/////////////////i4uL/9fX1///////o6Oj/zMzM////
+        /////////v7+///////Ozs7/8PDw///////+/v7//v7+//z8/P/a2tr/7e3t///////+/v7//////+/v
+        7//U1NT/9fX1///////S0tL/3d3d///////+/v7////////////Nzc3/5+fn///////+/v7///////7+
+        /v//////8vLy/9TU1P/e3t7/2dnZ/9ra2v/s7Oz/8fHx//f39//Pz8//19fX///////+/v7/////////
+        /////////v7+////////////+/v7///////u7u7/0tLS/+Li4v+/v7//wMDA///////9/f3/////////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

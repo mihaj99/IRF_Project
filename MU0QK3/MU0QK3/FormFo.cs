@@ -15,13 +15,14 @@ namespace MU0QK3
         public FormFo()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile("naplo.jpg");
         }
 
         private void btnUjTanulo_Click(object sender, EventArgs e)
         {
             FormUjTanulo FUT = new FormUjTanulo();
             FUT.ShowDialog();
-            //this.Visible = false;
+           
         }
 
         private void btnJegyek_Click(object sender, EventArgs e)

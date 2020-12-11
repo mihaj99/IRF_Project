@@ -21,15 +21,15 @@ namespace MU0QK3
                 {
                     _osztalyzat = 1;
                 }
-                else if (_osztalyzat>=1.7 && _osztalyzat<2.51)
+                else if ( _osztalyzat<=2.5)
                 {
                     _osztalyzat = 2;
                 }
-                else if (_osztalyzat>=2.51 && _osztalyzat<3.51)
+                else if ( _osztalyzat<=3.5)
                 {
                     _osztalyzat = 3;
                 }
-                else if (_osztalyzat>=3.51 && _osztalyzat<4.51)
+                else if ( _osztalyzat<=4.5)
                 {
                     _osztalyzat = 4;
                 }
@@ -37,7 +37,9 @@ namespace MU0QK3
                 {
                     _osztalyzat = 5;
                 }
-            
+
+                
+
             }
         }
 

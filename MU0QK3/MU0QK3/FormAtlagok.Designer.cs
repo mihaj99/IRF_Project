@@ -32,6 +32,7 @@ namespace MU0QK3
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAtlagok));
             this.chartAtlagok = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonOsztalyzatok = new System.Windows.Forms.Button();
@@ -80,10 +81,11 @@ namespace MU0QK3
             this.Controls.Add(this.buttonOsztalyzatok);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartAtlagok);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(938, 731);
             this.MinimumSize = new System.Drawing.Size(938, 726);
             this.Name = "FormAtlagok";
-            this.Text = "FormAtlagok";
+            this.Text = "Átlagok";
             ((System.ComponentModel.ISupportInitialize)(this.chartAtlagok)).EndInit();
             this.ResumeLayout(false);
 
