@@ -38,7 +38,7 @@ namespace MU0QK3
             if (txtNev.Text=="")
             {
                 MessageBox.Show("Név megadása kötelező!");
-                txtNev.Focus();
+                
                 return;
             }
             

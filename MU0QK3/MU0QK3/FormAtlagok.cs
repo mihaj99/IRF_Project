@@ -15,18 +15,11 @@ namespace MU0QK3
         
         List<atlag> atlagok = new List<atlag>();
         public static List<VegsoJegy> vegsojegyek = new List<VegsoJegy>();
-
-        int szamlalo;
-        int maxhossz = 0;
-        
-        
-
         Database1Entities context = new Database1Entities();
-        double osszeg = 0;
-        double darabszam = 0;
-
-
-
+        int szamlalo;
+        int maxhossz ;
+        double osszeg;
+        double darabszam;
 
         public FormAtlagok()
         {

@@ -17,10 +17,6 @@ namespace MU0QK3
         public static Tanulok akttan = new Tanulok();
         public Jegyek aktjegy = new Jegyek();
         BindingList<Jegyek> jegyek = new BindingList<Jegyek>();
-        
-
-
-
         public FormUjJegy()
         {
             InitializeComponent();
