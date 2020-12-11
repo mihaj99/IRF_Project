@@ -17,17 +17,20 @@ namespace MU0QK3
         public static Tanulok akttan = new Tanulok();
         public Jegyek aktjegy = new Jegyek();
         BindingList<Jegyek> jegyek = new BindingList<Jegyek>();
-        
+        bool torlesgomb;
+
+
 
         public FormUjJegy()
         {
             InitializeComponent();
+            buttonTorles.Enabled= false;
             listBoxJegyek.DataSource = jegyek;
             listBoxJegyek.DisplayMember = "Jegy";
             listBoxJegyek.ValueMember = "Id";
-            feltolt();
-            osztalyzatok();
-            temak();
+            Feltolt();
+            Osztalyzatok();
+            Temak();
             
             listBoxTanulok.SelectedIndexChanged += ListBoxTanulok_SelectedIndexChanged;
             listBoxJegyek.SelectedIndexChanged += ListBoxJegyek_SelectedIndexChanged;
@@ -38,33 +41,42 @@ namespace MU0QK3
 
         private void TextBoxKereses_TextChanged(object sender, EventArgs e)
         {
-            feltolt();
+            Feltolt();
         }
 
         private void ListBoxJegyek_SelectedIndexChanged(object sender, EventArgs e)
         {
-            aktjegy=(Jegyek)listBoxJegyek.SelectedItem;
+            
+            aktjegy =(Jegyek)listBoxJegyek.SelectedItem;
             foreach (var item in jegyek)
             {
                 if (item.Id==aktjegy.Id)
                 {
                     labelDat.Text = item.Dátum.ToString();
                     labelTem.Text = item.Mire;
+                    buttonTorles.Enabled = true;
                 }
             }
+            
+
         }
 
         private void ListBoxTanulok_SelectedIndexChanged(object sender, EventArgs e)
         {
+            buttonTorles.Enabled = false;
+            labelDat.Text = "";
+            labelTem.Text = "";
+
             
             akttan = (Tanulok)listBoxTanulok.SelectedItem;
             
             jegyfeltolt();
             labelCim.Text = String.Format("{0} osztályzatai", akttan.Név);
             
+
         }
 
-        private void temak()
+        private void Temak()
         {
             StreamReader sr = new StreamReader("temak.txt", Encoding.UTF8);
 
@@ -75,7 +87,7 @@ namespace MU0QK3
                 comboBoxTema.Items.Add(item);
             }
         }
-        private void feltolt()
+        private void Feltolt()
         {
             var ker_eredmeny = (from x in context.Tanuloks
                                 where x.Név.Contains(textBoxKereses.Text)
@@ -84,7 +96,7 @@ namespace MU0QK3
             listBoxTanulok.DisplayMember = "Név";
             listBoxTanulok.ValueMember = "Id";
         }
-        private void osztalyzatok()
+        private void Osztalyzatok()
         {
             comboBoxOsztalyzat.Items.Add(1);
             comboBoxOsztalyzat.Items.Add(2);
@@ -95,13 +107,9 @@ namespace MU0QK3
         
 
         public void jegyfeltolt()
-        {
-
-            
+        { 
             jegyek.Clear();
-            
-            
-            MessageBox.Show(""+jegyek.Count()) ;
+
             foreach (var item in context.Jegyeks)
             {
                 if (item.TanuloFK == akttan.Id)
@@ -109,13 +117,6 @@ namespace MU0QK3
                     jegyek.Add(item);
                 }
             }
-            
-            listBoxJegyek.Refresh();
-            
-            
-            
-            
-
 
         }
 
@@ -154,16 +155,12 @@ namespace MU0QK3
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            if (listBoxJegyek.SelectedItem!=null)
-            {
+            
                 context.Jegyeks.Remove(aktjegy);
                 context.SaveChanges();
                 jegyfeltolt();
-            }
-            else
-            {
-                MessageBox.Show("Válasszon jegyet!");
-            }
+            
+            buttonTorles.Enabled = false; 
             
         }
 
@@ -182,14 +179,6 @@ namespace MU0QK3
                     comboBoxTema.Items.Add(item);
                 }
             }
-            
-            
-
-                
-            
-            
-
-
             
         }
     }

@@ -104,12 +104,14 @@ namespace MU0QK3
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.LightGreen;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSave.Location = new System.Drawing.Point(107, 162);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Felvitel";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelKereses
@@ -139,12 +141,14 @@ namespace MU0QK3
             // 
             // buttonTorles
             // 
+            this.buttonTorles.BackColor = System.Drawing.Color.Tomato;
+            this.buttonTorles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonTorles.Location = new System.Drawing.Point(565, 174);
             this.buttonTorles.Name = "buttonTorles";
             this.buttonTorles.Size = new System.Drawing.Size(75, 23);
             this.buttonTorles.TabIndex = 14;
             this.buttonTorles.Text = "Törlés";
-            this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.UseVisualStyleBackColor = false;
             this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
             // checkBoxSNIKijelez

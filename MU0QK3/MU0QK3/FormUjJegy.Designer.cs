@@ -121,28 +121,25 @@ namespace MU0QK3
             this.labelKereses.AutoSize = true;
             this.labelKereses.Location = new System.Drawing.Point(12, 37);
             this.labelKereses.Name = "labelKereses";
-            this.labelKereses.Size = new System.Drawing.Size(45, 13);
+            this.labelKereses.Size = new System.Drawing.Size(48, 13);
             this.labelKereses.TabIndex = 11;
-            this.labelKereses.Text = "Keresés";
+            this.labelKereses.Text = "Keresés:";
             // 
             // btnFelvitel
             // 
+            this.btnFelvitel.BackColor = System.Drawing.Color.LightGreen;
+            this.btnFelvitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnFelvitel.Location = new System.Drawing.Point(89, 372);
             this.btnFelvitel.Name = "btnFelvitel";
             this.btnFelvitel.Size = new System.Drawing.Size(75, 23);
             this.btnFelvitel.TabIndex = 12;
             this.btnFelvitel.Text = "Felvitel";
-            this.btnFelvitel.UseVisualStyleBackColor = true;
+            this.btnFelvitel.UseVisualStyleBackColor = false;
             this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
             // listBoxJegyek
             // 
             this.listBoxJegyek.FormattingEnabled = true;
-            this.listBoxJegyek.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5"});
             this.listBoxJegyek.Location = new System.Drawing.Point(373, 63);
             this.listBoxJegyek.Name = "listBoxJegyek";
             this.listBoxJegyek.Size = new System.Drawing.Size(223, 186);
@@ -184,18 +181,20 @@ namespace MU0QK3
             // 
             // buttonTorles
             // 
+            this.buttonTorles.BackColor = System.Drawing.Color.Tomato;
+            this.buttonTorles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonTorles.Location = new System.Drawing.Point(605, 144);
             this.buttonTorles.Name = "buttonTorles";
             this.buttonTorles.Size = new System.Drawing.Size(75, 23);
             this.buttonTorles.TabIndex = 20;
             this.buttonTorles.Text = "Törlés";
-            this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.UseVisualStyleBackColor = false;
             this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
             // labelCim
             // 
             this.labelCim.AutoSize = true;
-            this.labelCim.Location = new System.Drawing.Point(483, 37);
+            this.labelCim.Location = new System.Drawing.Point(370, 37);
             this.labelCim.Name = "labelCim";
             this.labelCim.Size = new System.Drawing.Size(0, 13);
             this.labelCim.TabIndex = 21;

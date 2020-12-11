@@ -31,16 +31,8 @@ namespace MU0QK3
         public FormAtlagok()
         {
             InitializeComponent();
-            
-
-        
-
-
-
             Atlagszamitas();
             Diagram();
-            
-            
             NevekKiir();
             MaximumHossz();
             AtlagKiir();
@@ -49,8 +41,6 @@ namespace MU0QK3
 
         private void AtlagKiir()
         {
-            
-            
             szamlalo = 0;
             foreach (var item in atlagok)
             {
@@ -70,8 +60,6 @@ namespace MU0QK3
             
             foreach (AtlagCimke item in panel1.Controls)
             {
-                
-                
                 if (item.Width>maxhossz)
                 {
                     maxhossz = item.Width;
@@ -83,8 +71,6 @@ namespace MU0QK3
 
         private void NevekKiir()
         {
-            
-
             szamlalo = 0;
             foreach (var item in atlagok)
             {
@@ -141,7 +127,7 @@ namespace MU0QK3
                 atlag ujatlag = new atlag();
                 ujatlag.ID = tanulo.Id;
                 ujatlag.nev = tanulo.Név;
-                ujatlag.Atlag = osszeg / darabszam;
+                ujatlag.Atlag = Math.Round(osszeg / darabszam,2);
                 atlagok.Add(ujatlag);
 
             }
