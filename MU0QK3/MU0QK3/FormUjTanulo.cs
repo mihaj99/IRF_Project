@@ -57,7 +57,7 @@ namespace MU0QK3
             }
             
             uj.Név = txtNev.Text;
-            uj.Születési_dátum = dateTimeSzuldat.Value;
+            uj.Születési_dátum =dateTimeSzuldat.Value;
             uj.SNI = chbSNI.Checked;
             context.Tanuloks.Add(uj);
             try
@@ -83,7 +83,7 @@ namespace MU0QK3
             
             akttan = (Tanulok)listBoxTanulok.SelectedItem;
             labelNevKijelez.Text = akttan.Név;
-            labelSzuldatKijelez.Text = akttan.Születési_dátum.ToString();
+            labelSzuldatKijelez.Text = akttan.Születési_dátum.ToString().Remove(akttan.Születési_dátum.ToString().Length-8);
             checkBoxSNIKijelez.Checked =(bool) akttan.SNI;
             buttonTorles.Enabled = true;
 

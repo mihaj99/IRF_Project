@@ -52,7 +52,7 @@ namespace MU0QK3
             {
                 if (item.Id==aktjegy.Id)
                 {
-                    labelDat.Text = item.Dátum.ToString();
+                    labelDat.Text = item.Dátum.Value.Date.ToString();
                     labelTem.Text = item.Mire;
                     buttonTorles.Enabled = true;
                 }
